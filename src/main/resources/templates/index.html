@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Index</title>
 </head>
 <body>
+<!--Will make pretty later.-->
+<a href="/add">Add a job</a><br>
 
+<div th:each="job : ${jobs}">
+    <p th:inline="text">[[${job.title}]]</p>
+</div>
 </body>
 </html>
