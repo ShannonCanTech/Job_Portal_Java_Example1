@@ -1,46 +1,68 @@
 package dev.shannonfoster.demo;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.util.Calendar;
-import java.util.Date;
 
+@Entity
 public class Job {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @NotNull
-    @Size(min=4)
     private String title;
 
     @NotNull
-    @Size(min=3)
     private String employer;
 
     @NotNull
-    @Size(min=10)
     private String description;
 
     @NotNull
     private Calendar date;
 
-    public long getId() { return id; }
-    public void setId(long id) { this.id = id; }
+    public long getId() {
+        return id;
+    }
 
-    public String getTitle() { return title; }
-    public void setTitle(String title) { this.title = title; }
+    public void setId(long id) {
+        this.id = id;
+    }
 
-    public String getEmployer(){ return employer; }
-    public void setEmployer(String employer) { this.employer = employer; }
+    public String getTitle() {
+        return title;
+    }
 
-    public String getDescription() { return description; }
-    public void setDescription(String description) { this.description = description; }
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-    public Calendar getDate() { return date; }
-    public void setDate(Calendar date){ this.date = date;}
+    public String getEmployer() {
+        return employer;
+    }
+
+    public void setEmployer(String employer) {
+        this.employer = employer;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Calendar getDate() {
+        return date;
+    }
+
+    public void setDate(Calendar date) {
+        this.date = date;
+    }
+
 }

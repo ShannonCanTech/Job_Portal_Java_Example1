@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="www.thymeleaf.org">
-<head>
+<head th:insert="fragments/base.html :: head">
     <meta charset="UTF-8">
     <title>Index</title>
 </head>
 <body>
 <!--Will make pretty later.-->
-<a href="/add">Add a job</a><br>
+<nav th:insert="fragments/base.html :: nav"></nav>
 
-<div th:each="job : ${jobs}">
-    <p th:inline="text">[[${job.title}]]</p>
-</div>
+
+<div th:insert="fragments/base.html :: bootstrap"></div>
 </body>
 </html>
